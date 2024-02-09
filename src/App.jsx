@@ -1,11 +1,12 @@
-import { HStack, Input, VStack } from '@chakra-ui/react'
+import { HStack, Input, VStack, FormControl, FormLabel, Button } from '@chakra-ui/react'
 
 function App() {
 
   return (
-    <div className="bg-white shadow-md p-4">
-      <VStack className="">
-        <p>Personal Details</p>
+    <div className="bg-white shadow-md p-10 w-[400px] mx-auto flex justify-center items-start flex-col gap-2 text-left">
+      <h1 className='font-bold text-2xl'>Checkout Page</h1>
+      <VStack className="text-left items-start">
+        <p className='text-left'>Personal Details</p>
         <HStack>
           <FormControl>
             <FormLabel>Firstname</FormLabel>
@@ -50,6 +51,14 @@ function App() {
         </FormControl>
 
       </VStack>
+      <HStack className='w-full'>
+        <Button className='w-full' colorScheme='red'>
+          Cancel
+        </Button>
+        <Button className='w-full' colorScheme='green'>
+          Confirm
+        </Button>
+      </HStack>
     </div>
   )
 }
